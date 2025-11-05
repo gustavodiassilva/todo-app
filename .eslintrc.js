@@ -44,14 +44,12 @@ module.exports = {
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     'no-debugger': 'error',
 
-    'unused-imports/no-unused-imports': 'warn',
     'import/order': ['warn', {
       groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index']],
       'newlines-between': 'always',
       alphabetize: { order: 'asc', caseInsensitive: true },
     }],
 
-    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
 
