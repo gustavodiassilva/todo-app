@@ -1,26 +1,25 @@
+import BottomNavigation from '@/components/BottomNavigation/BottomNavigation';
+import HomeIcon from 'assets/icons/HomeIcon';
 import React from 'react';
-import { Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Text } from 'react-native';
+import { Container } from './style';
 
 export default function Index() {
 
     const [text, onChangeText] = React.useState('')
     return (
-        <View>
+        <>
+            <Container>
 
-            <Text>Todo App</Text>
+                <Text>Welcome to Todo App</Text>
 
-            <Text>Your tasks</Text>
-
-
-            <View>
-                <TextInput value={text} onChangeText={onChangeText} />
-
-                <TouchableOpacity>
-                    <Text>Enviar</Text>
-                </TouchableOpacity>
-            </View>
+                <HomeIcon />
 
 
-        </View>
+            </Container >
+            <BottomNavigation />
+
+        </>
+
     )
 }
