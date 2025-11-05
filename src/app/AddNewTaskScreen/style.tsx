@@ -61,14 +61,14 @@ export const Description = styled.TextInput`
 
 export const ContainerIcons = styled.View`
     width:100%;
-    justify-content: space-between;
     align-items: center;
     background-color: #f8f9fa;
     height: 45px;
     border-radius: 5px;
-    top: 100;
-    padding: 10px 20px;
+    top: 20px;
+    padding: 10px 35px;
     flex-direction: row;
+    justify-content: space-between;
 `;
 
 export const IconsItem = styled.TouchableOpacity`
@@ -84,3 +84,17 @@ export const ContainerDate = styled.View`
 
 export const DatePickerModal = styled.Modal``;
 
+export const ContainerButton = styled.View`
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    align-items: center;
+`;
+
+export const NewTaskButton = styled.TouchableOpacity`
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+`;

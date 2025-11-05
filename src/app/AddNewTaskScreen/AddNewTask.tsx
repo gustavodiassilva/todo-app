@@ -5,7 +5,7 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Text } from 'react-native';
-import { BackButton, Body, Container, ContainerDate, ContainerIcons, Description, Header, IconsItem, InputCustom, Title } from './style';
+import { BackButton, Body, Container, ContainerButton, ContainerDate, ContainerIcons, Description, Header, IconsItem, InputCustom, NewTaskButton, Title } from './style';
 
 
 
@@ -68,8 +68,12 @@ export default function AddNewTask() {
                             onClose={() => setOpenEndDate(false)}
                             onDateChange={setEndDate} />
                     </IconsItem>
-
                 </ContainerIcons>
+                <ContainerButton>
+                    <NewTaskButton onPress={() => { /* Add task logic here */ }}>
+                        <Text style={{ color: 'white', fontWeight: 'bold' }}>Add Task</Text>
+                    </NewTaskButton>
+                </ContainerButton>
             </Body>
 
         </Container>
