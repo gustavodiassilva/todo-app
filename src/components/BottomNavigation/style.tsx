@@ -6,7 +6,7 @@ export const BottomNavContainer = styled.View`
     flex-direction: row;
     align-items: center;
     padding: 10px;
-    background-color: #363636;
+    background-color: #fff;
     width: 100%;
     height: 60px;
     position:absolute;

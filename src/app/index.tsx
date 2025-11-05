@@ -1,4 +1,5 @@
 import BottomNavigation from '@/components/BottomNavigation/BottomNavigation';
+import HeaderNavigator from '@/components/HeaderNavigator/HeaderNavigator';
 import HomeIcon from 'assets/icons/HomeIcon';
 import React from 'react';
 import { Text } from 'react-native';
@@ -10,6 +11,7 @@ export default function Index() {
     return (
         <>
             <Container>
+                <HeaderNavigator />
 
                 <Text>Welcome to Todo App</Text>
 
