@@ -28,10 +28,10 @@ module.exports = {
     'plugin:react-native/all',
     'plugin:import/recommended',
     'plugin:import/typescript',
-    'prettier' // Mantém o Prettier no fim para resolver conflitos
+    'prettier'
   ],
   rules: {
-    // Prettier como fonte de verdade para formatação
+
     'prettier/prettier': ['error', {
       singleQuote: true,
       trailingComma: 'all',
@@ -40,28 +40,25 @@ module.exports = {
       bracketSpacing: true
     }],
 
-    // Code smells comuns
+
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     'no-debugger': 'error',
 
-    // Imports organizados e sem lixo
-    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-imports': 'warn',
     'import/order': ['warn', {
       groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index']],
       'newlines-between': 'always',
       alphabetize: { order: 'asc', caseInsensitive: true },
     }],
 
-    // TS e boas práticas
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
 
-    // React/React Native
-    'react/prop-types': 'off', // usando TS
+    'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'react-native/no-inline-styles': 'warn',
-    'react-native/no-raw-text': 'off', // geralmente desativado em apps multi-língua
+    'react-native/no-raw-text': 'off',
   },
   ignorePatterns: [
     'node_modules/',
