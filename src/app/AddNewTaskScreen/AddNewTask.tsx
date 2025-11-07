@@ -69,6 +69,29 @@ export default function AddNewTask() {
                             onDateChange={setEndDate} />
                     </IconsItem>
                 </ContainerIcons>
+                <ContainerIcons carrousel snapInterval={80}>
+                    <IconsItem>
+                        <Text>priority</Text>
+                    </IconsItem>
+                    <IconsItem>
+                        <Text>priority</Text>
+                    </IconsItem>
+                    <IconsItem>
+                        <Text>priority</Text>
+                    </IconsItem>
+                    <IconsItem>
+                        <Text>priority</Text>
+                    </IconsItem>
+                    <IconsItem>
+                        <Text>priority</Text>
+                    </IconsItem>
+                    <IconsItem>
+                        <Text>priority</Text>
+                    </IconsItem>
+                    <IconsItem>
+                        <Text>priority</Text>
+                    </IconsItem>
+                </ContainerIcons>
                 <ContainerButton>
                     <NewTaskButton onPress={() => { /* Add task logic here */ }}>
                         <Text style={{ color: 'white', fontWeight: 'bold' }}>Add Task</Text>
