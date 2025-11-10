@@ -1,6 +1,4 @@
 
-import { CarrouselModelProps } from '@/Models/CarrouselModel';
-import { ScrollView } from 'react-native';
 import styled from 'styled-components/native';
 
 export const InputCustom = styled.TextInput`
@@ -60,28 +58,14 @@ export const Description = styled.TextInput`
 
 `;
 
-
-export const ContainerIcons = styled(ScrollView).attrs<CarrouselModelProps>(({ carrousel, snapInterval }) => ({
-    horizontal: carrousel,
-    showHorizontalScrollIndicator: false,
-    decelerationRate: carrousel ? 'fast' : 'normal',
-    snapToInterval: carrousel ? (snapInterval || 300) : undefined,
-    snapToAlignment: carrousel ? 'center' : undefined,
-    contentContainerStyle: {
-        flexDirection: 'row',
-        alignItems: 'flex-start',
-        justifyContent: 'space-between',
-        flex: 1,
-
-    },
-})) <CarrouselModelProps>`
-    width:100%;
-    background-color: #f8f9fa;
-    height: 25px;
-    border-radius: 5px;
-    top: 20px;
-    padding: 10px 35px;
+export const ContainerIcons = styled.View`
+    width: 100%;
+    justify-content: space-between;
     flex-direction: row;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding-vertical: 10px;
 `;
 
 export const IconsItem = styled.TouchableOpacity`

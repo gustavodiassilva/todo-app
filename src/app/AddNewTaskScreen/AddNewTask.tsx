@@ -1,5 +1,6 @@
 
 import DatePickerModal from '@/components/DatePickerModal/DatePickerModal';
+import { HorizontalCarrousel } from '@/components/HorizontalComponent/HorizontalComponent';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useRouter } from 'expo-router';
@@ -19,6 +20,22 @@ export default function AddNewTask() {
 
     const route = useRouter();
 
+    const items = [
+        { id: 1, label: 'priority' },
+        { id: 2, label: 'urgent' },
+        { id: 3, label: 'normal' },
+        { id: 4, label: 'low' },
+        { id: 5, label: 'high' },
+        { id: 6, label: 'medium' },
+        { id: 7, label: 'critical' },
+        { id: 8, label: 'pending' },
+        { id: 9, label: 'done' },
+        { id: 10, label: 'review' },
+        { id: 11, label: 'archived' },
+    ];
+const handleItemPress = (): void => {
+    return;
+}
     return (
         <Container>
             <Header>
@@ -69,31 +86,13 @@ export default function AddNewTask() {
                             onDateChange={setEndDate} />
                     </IconsItem>
                 </ContainerIcons>
-                <ContainerIcons carrousel snapInterval={80}>
-                    <IconsItem>
-                        <Text>priority</Text>
-                    </IconsItem>
-                    <IconsItem>
-                        <Text>priority</Text>
-                    </IconsItem>
-                    <IconsItem>
-                        <Text>priority</Text>
-                    </IconsItem>
-                    <IconsItem>
-                        <Text>priority</Text>
-                    </IconsItem>
-                    <IconsItem>
-                        <Text>priority</Text>
-                    </IconsItem>
-                    <IconsItem>
-                        <Text>priority</Text>
-                    </IconsItem>
-                    <IconsItem>
-                        <Text>priority</Text>
-                    </IconsItem>
-                </ContainerIcons>
+                <HorizontalCarrousel 
+                items={items}
+                snapInterval={80}
+                onItemPress={handleItemPress}
+                />
                 <ContainerButton>
-                    <NewTaskButton onPress={() => { /* Add task logic here */ }}>
+                    <NewTaskButton onPress={() => { }}>
                         <Text style={{ color: 'white', fontWeight: 'bold' }}>Add Task</Text>
                     </NewTaskButton>
                 </ContainerButton>
