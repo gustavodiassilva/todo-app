@@ -1,4 +1,6 @@
-export const items = [
+import { TaskPriorityModel } from "./Models/TaskPriorityModel";
+
+export const items: TaskPriorityModel[] = [
         { id: 1, label: 'priority' },
         { id: 2, label: 'urgent' },
         { id: 3, label: 'normal' },

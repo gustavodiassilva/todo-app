@@ -1,4 +1,4 @@
-import { CarrouselItem, HorizontalCarrouselProps } from '@/Models/HorizontalComponent';
+import { CarrouselItem, HorizontalCarrouselProps } from '@/Models/HorizontalComponentModel';
 import React from 'react';
 import { CarrouselContainer, IconsItem, ItemText } from './styles';
 
