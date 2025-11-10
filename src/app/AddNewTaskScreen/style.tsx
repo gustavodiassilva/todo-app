@@ -58,17 +58,14 @@ export const Description = styled.TextInput`
 
 `;
 
-
 export const ContainerIcons = styled.View`
-    width:100%;
-    align-items: center;
-    background-color: #f8f9fa;
-    height: 45px;
-    border-radius: 5px;
-    top: 20px;
-    padding: 10px 35px;
-    flex-direction: row;
+    width: 100%;
     justify-content: space-between;
+    flex-direction: row;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding-vertical: 10px;
 `;
 
 export const IconsItem = styled.TouchableOpacity`

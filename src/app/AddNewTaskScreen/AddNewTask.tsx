@@ -1,5 +1,7 @@
 
 import DatePickerModal from '@/components/DatePickerModal/DatePickerModal';
+import { HorizontalCarrousel } from '@/components/HorizontalComponent/HorizontalComponent';
+import { items } from '@/items';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useRouter } from 'expo-router';
@@ -19,6 +21,10 @@ export default function AddNewTask() {
 
     const route = useRouter();
 
+    
+const handleItemPress = (): void => {
+    return;
+}
     return (
         <Container>
             <Header>
@@ -69,8 +75,13 @@ export default function AddNewTask() {
                             onDateChange={setEndDate} />
                     </IconsItem>
                 </ContainerIcons>
+                <HorizontalCarrousel 
+                items={items}
+                snapInterval={80}
+                onItemPress={handleItemPress}
+                />
                 <ContainerButton>
-                    <NewTaskButton onPress={() => { /* Add task logic here */ }}>
+                    <NewTaskButton onPress={() => { }}>
                         <Text style={{ color: 'white', fontWeight: 'bold' }}>Add Task</Text>
                     </NewTaskButton>
                 </ContainerButton>
