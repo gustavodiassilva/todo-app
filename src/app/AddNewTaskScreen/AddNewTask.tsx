@@ -2,11 +2,13 @@
 import DatePickerModal from '@/components/DatePickerModal/DatePickerModal';
 import { HorizontalCarrousel } from '@/components/HorizontalComponent/HorizontalComponent';
 import { items } from '@/items';
+import { notifier } from '@/lib/notifier';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Text } from 'react-native';
+import FlashMessage from 'react-native-flash-message';
 import { BackButton, Body, Container, ContainerButton, ContainerDate, ContainerIcons, Description, Header, IconsItem, InputCustom, NewTaskButton, Title } from './style';
 
 
@@ -25,8 +27,17 @@ export default function AddNewTask() {
 const handleItemPress = (): void => {
     return;
 }
+
+const handleTaskAdd = async ():Promise<T> => {
+    await notifier.promise(fakeSave(), {
+        loading: 'Salvando tarefa...',
+        success: () => 'Tarefa salva com sucesso!',
+        error: () => 'Erro ao salvar a tarefa.',
+    })
+}
     return (
         <Container>
+            <FlashMessage position="top" floating statusBarHeight={20} />
             <Header>
                 <BackButton onPress={() => { route.back() }}>
                     <Ionicons name="arrow-back" size={24} color="black" />
@@ -81,7 +92,7 @@ const handleItemPress = (): void => {
                 onItemPress={handleItemPress}
                 />
                 <ContainerButton>
-                    <NewTaskButton onPress={() => { }}>
+                    <NewTaskButton onPress={() => { handleTaskAdd()}}>
                         <Text style={{ color: 'white', fontWeight: 'bold' }}>Add Task</Text>
                     </NewTaskButton>
                 </ContainerButton>
@@ -89,4 +100,12 @@ const handleItemPress = (): void => {
 
         </Container>
     );
+}
+
+async function fakeSave() {
+  return new Promise((resolve) => {
+    console.log('Fake save operation started');
+    setTimeout(() => resolve(true), 2000);
+    console.log('Fake save operation completed');
+  });
 }

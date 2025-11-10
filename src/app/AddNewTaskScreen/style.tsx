@@ -65,7 +65,7 @@ export const ContainerIcons = styled.View`
     background-color: #f8f9fa;
     border-radius: 5px;
     margin-top: 20px;
-    padding-vertical: 10px;
+    padding: 10px;
 `;
 
 export const IconsItem = styled.TouchableOpacity`
