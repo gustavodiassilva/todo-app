@@ -6,8 +6,6 @@ import { Text } from 'react-native';
 import { Container } from './style';
 
 export default function Index() {
-
-    const [text, onChangeText] = React.useState('')
     return (
         <>
             <Container>
